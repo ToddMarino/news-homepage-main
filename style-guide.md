@@ -18,12 +18,15 @@ The designs were created to the following widths:
 
 ### Neutral
 
-Off-white: hsl(36, 100%, 99%)
-Grayish blue: hsl(233, 8%, 79%)
-Dark grayish blue: hsl(236, 13%, 42%)
-Very dark blue: hsl(240, 100%, 5%)
+Off-white: hsl 36, 100%, 99%
+Grayish blue: hsl 233, 8%, 79%
+Dark grayish blue: hsl 236, 13%, 42%
+Very dark blue: hsl 240, 100%, 5%
 
 ## Typography
+h1: 40px, line-height: 1
+
+body: 15px, line-height: 1.65
 
 ### Body Copy
 

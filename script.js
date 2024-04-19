@@ -1,19 +1,22 @@
-const nav = document.querySelector('nav');
-const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const navBtn = document.querySelector('.nav-btn')
+const navWindow = document.querySelector('#navigation')
+const links = document.querySelectorAll('li a')
 
+console.log(links)
 
-if (screen.width > 560) {
-    nav.setAttribute('data-visible', 'false')
-    mobileNavToggle.setAttribute('aria-expanded', 'false')
-}
-
-mobileNavToggle.addEventListener('click', () => {
-    const visibility = nav.getAttribute('data-visible')
-    if (visibility === 'false') {
-        nav.setAttribute('data-visible', 'true')
-        mobileNavToggle.setAttribute('aria-expanded', 'true')
+navBtn.addEventListener('click', () => {
+    if (navWindow.getAttribute('data-expanded') === "false") {
+        navWindow.setAttribute('data-expanded', "true")
+        navBtn.setAttribute('data-visible', 'true')
     } else {
-        nav.setAttribute('data-visible', 'false')
-        mobileNavToggle.setAttribute('aria-expanded', 'false')
+        navWindow.setAttribute('data-expanded', "false")
+        navBtn.setAttribute('data-visible', 'false')
     }
-});
+})
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navWindow.setAttribute('data-expanded', "false")
+        navBtn.setAttribute('data-visible', 'false')
+    })
+})

@@ -3,126 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Frontend Mentor | News homepage</title>
   </head>
+
   <body>
     <div class="container">
       <header>
-        <div class="nav__logo">
-          <img src="assets/images/logo.svg" alt="logo" role="img" />
-        </div>
-        <button
-          class="mobile-nav-toggle"
-          aria-controlls="navigation"
-          aria-expanded="false"
-        >
+        <div class="image_container"></div>
+        <button aria-controls="navigation" data-visible="false" class="nav-btn">
           <span class="sr-only">Menu</span>
         </button>
-        <nav data-visible="false">
-          <ul class="navbar__links" id="navigation">
-            <li class="navbar__link"><a href="#">Home</a></li>
-            <li class="navbar__link"><a href="new.html">New</a></li>
-            <li class="navbar__link"><a href="#">Popular</a></li>
-            <li class="navbar__link"><a href="#">Trending</a></li>
-            <li class="navbar__link"><a href="#">Categories</a></li>
+        <nav id="navigation" data-expanded="false">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
           </ul>
         </nav>
       </header>
 
-      <div class="hero__container">
-        <div class="hero">
-          <div class="hero__img"></div>
-          <div class="hero__content">
-            <h1 class="hero__title">The Bright Future of Web 3.0?</h1>
-            <div class="hero__sub_text">
-              <p>
-                We dive into the next evolution of the web that claims to put the
-                power of the platforms back into the hands of the people. But is
-                it really fulfilling its promise?
-              </p>
-              <div><a class="link-btn" href="#">Read more</a></div>
-            </div>
-          </div>
-        </div>
+      <main>
+        <section class="hero">
+          <img
+            src="assets/images/image-web-3-mobile.jpg"
+            alt="geometric shapes"
+          />
+          <h1>The Bright Future of Web 3.0?</h1>
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <a href="#" class="btn">Read more</a>
+        </section>
         <aside>
-          <h2>New</h2>
-          <div class="aside_articles">
-            <div class="aside__article">
-              <h3 class="aside__title">Hydrogen VS Electric Cars</h3>
-              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-            </div>
-            <div class="aside__article">
-              <h3 class="aside__title">The Downsides of AI Artistry</h3>
-              <p>
-                What are the possible adverse effects of on-demand AI image
-                generation?
-              </p>
-            </div>
-            <div class="aside__article">
-              <h3 class="aside__title">Is VC Funding Drying Up?</h3>
-              <p>
-                Private funding by VC firms is down 50% YOY. We take a look at
-                what that means.
-              </p>
-            </div>
-          </div>
+          <p><span>New</span></p>
+          <article>
+            <h2><a href="#">Hydrogen VS Electric Cars</a></h2>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <article>
+            <h2><a href="#">The Downsides of AI Artistry</a></h2>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+          <article>
+            <h2><a href="#">Is VC Funding Drying Up?</a></h2>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
         </aside>
-      </div>
 
-      <section class="cards">
-        <div class="card">
-          <img
-            src="assets/images/image-retro-pcs.jpg"
-            alt="1990s computer and monitor with other 1980s and 1990s computer components"
-            class="card__img"
-          />
-          <div class="card__content">
-            <p><span>01</span></p>
-            <h3 class="card__title">Reviving Retro PCs</h3>
-            <p class="card__desc">
-              What happens when old PCs are given modern upgrades?
-            </p>
+        <section class="news">
+          <div class="card">
+            <img
+              src="assets/images/image-retro-pcs.jpg"
+              alt="1990s PCs and accessories"
+            />
+            <div class="card__text">
+              <p><span>01</span></p>
+              <h2><a href="#">Reviving Retro PCs</a></h2>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="assets/images/image-top-laptops.jpg"
-            alt="Slanted photo, closeup, of a keyboard with rgb lighting."
-            class="card__img"
-          />
-          <div class="card__content">
-            <p><span>02</span></p>
-            <h3 class="card__title">Top 10 Laptops of 2022</h3>
-            <p class="card__desc">
-              Our best picks for various needs and budgets.
-            </p>
+          <div class="card">
+            <img
+              src="assets/images/image-top-laptops.jpg"
+              alt="close up of laptop keyboard"
+            />
+            <div class="card__text">
+              <p><span>02</span></p>
+              <h2><a href="#">Top 10 Laptops of 2022</a></h2>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="assets/images/image-gaming-growth.jpg"
-            alt="Playstation style controller being dropped into a person's palm."
-            class="card__img"
-          />
-          <div class="card__content">
-            <p><span>03</span></p>
-            <h3 class="card__title">The Growth of Gaming</h3>
-            <p class="card__desc">
-              How the pandemic has sparked fresh opportunities.
-            </p>
+          <div class="card">
+            <img
+              src="assets/images/image-gaming-growth.jpg"
+              alt="playstation controller dropping into someone's palm"
+            />
+            <div class="card__text">
+              <p><span>03</span></p>
+              <h2><a href="#">The Growth of Gaming</a></h2>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   </body>
 </html>
